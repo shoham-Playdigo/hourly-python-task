@@ -1,8 +1,9 @@
 name: Run Python Script Hourly
 
 on:
+  workflow_dispatch:        # Allows manual runs from the Actions tab
   schedule:
-    - cron: '0 * * * *' # Every hour, on the hour (UTC)
+    - cron: '0 * * * *'     # Runs every hour (UTC)
 
 jobs:
   run-script:
